@@ -36,6 +36,8 @@ export default class LoginForm extends Vue {
   loginUser(): void {
     console.log(this.roomId, this.userName);
 
+    this.$router.push({ name: "Conference", params: { roomId: this.roomId } });
+
     this.roomId = "";
     this.userName = "";
   }
